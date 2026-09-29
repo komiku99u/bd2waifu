@@ -229,8 +229,97 @@ async function drawResult() {
     const grad=ctx.createLinearGradient(0,y+tileH-130,0,y+tileH); grad.addColorStop(0,'rgba(0,0,0,0)'); grad.addColorStop(1,'rgba(0,0,0,.78)'); ctx.fillStyle=grad; ctx.fillRect(x,y,tileW,tileH);
     ctx.fillStyle='#fff'; ctx.textAlign='left'; ctx.font='900 21px Arial'; fitText(ctx,c.name,x+16,y+tileH-27,tileW-32,21);
     ctx.restore();
+
+    // Decorative frame around every waifu card. The double-line frame,
+    // corner ornaments and small center marks make the generated sheet
+    // feel more like a finished collectible card instead of a plain grid.
+    drawCardFrame(ctx,x,y,tileW,tileH);
   }
+
+  // Subtle outer frame for the whole poster.
+  ctx.save();
+  ctx.strokeStyle='#214b3d';
+  ctx.lineWidth=3;
+  roundRect(ctx,18,18,W-36,H-36,24);
+  ctx.stroke();
+  ctx.strokeStyle='rgba(60,124,100,.38)';
+  ctx.lineWidth=1;
+  roundRect(ctx,27,27,W-54,H-54,18);
+  ctx.stroke();
+  ctx.restore();
+
   ctx.fillStyle='#6a786d'; ctx.textAlign='center'; ctx.font='600 16px Arial'; ctx.fillText('my9waifu · make your own list',W/2,H-28);
+}
+
+function drawCardFrame(ctx,x,y,w,h){
+  const outer=6;
+  const inner=12;
+  const r=16;
+  const color='#f3d26b';
+  const dark='#214b3d';
+
+  ctx.save();
+
+  // Dark green backing gives the frame enough contrast over bright artwork.
+  ctx.strokeStyle=dark;
+  ctx.lineWidth=7;
+  roundRect(ctx,x+outer/2,y+outer/2,w-outer,h-outer,r+2);
+  ctx.stroke();
+
+  // Main warm-gold double border.
+  ctx.strokeStyle=color;
+  ctx.lineWidth=2.5;
+  roundRect(ctx,x+outer+2,y+outer+2,w-(outer+2)*2,h-(outer+2)*2,r);
+  ctx.stroke();
+
+  ctx.strokeStyle='rgba(243,210,107,.72)';
+  ctx.lineWidth=1;
+  roundRect(ctx,x+inner,y+inner,w-inner*2,h-inner*2,10);
+  ctx.stroke();
+
+  // Corner ornaments.
+  const len=Math.min(34,w*.12);
+  const pad=inner+5;
+  ctx.strokeStyle=color;
+  ctx.lineWidth=2;
+  ctx.lineCap='round';
+
+  function corner(cx,cy,dx,dy){
+    ctx.beginPath();
+    ctx.moveTo(cx,cy+dy*len);
+    ctx.lineTo(cx,cy);
+    ctx.lineTo(cx+dx*len,cy);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(cx+dx*8,cy+dy*8,4,0,Math.PI*2);
+    ctx.stroke();
+  }
+
+  corner(x+pad,y+pad,1,1);
+  corner(x+w-pad,y+pad,-1,1);
+  corner(x+pad,y+h-pad,1,-1);
+  corner(x+w-pad,y+h-pad,-1,-1);
+
+  // Small diamond marks centered on the top and bottom edges.
+  drawDiamond(ctx,x+w/2,y+pad-1,5,color);
+  drawDiamond(ctx,x+w/2,y+h-pad+1,5,color);
+
+  ctx.restore();
+}
+
+function drawDiamond(ctx,cx,cy,size,color){
+  ctx.save();
+  ctx.strokeStyle=color;
+  ctx.lineWidth=1.5;
+  ctx.beginPath();
+  ctx.moveTo(cx,cy-size);
+  ctx.lineTo(cx+size,cy);
+  ctx.lineTo(cx,cy+size);
+  ctx.lineTo(cx-size,cy);
+  ctx.closePath();
+  ctx.stroke();
+  ctx.restore();
 }
 
 function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
