@@ -41,10 +41,14 @@ async function init() {
   loadPopular();
 }
 
+function imageSrc(url) {
+  return `/api/image?url=${encodeURIComponent(url)}`;
+}
+
 function seedExample() {
   const ids = ['justia','eclipse','rubia','sylvia','angelica','helena','refithea','venaka','wilhelmina'];
   const examples = ids.map(id => state.byId.get(id)).filter(Boolean);
-  $('#exampleGrid').innerHTML = examples.map(c => `<img loading="lazy" src="${esc(c.costumes?.[0]?.image || c.image)}" alt="${esc(c.name)}">`).join('');
+  $('#exampleGrid').innerHTML = examples.map(c => `<img loading="lazy" src="${esc(imageSrc(c.costumes?.[0]?.image || c.image))}" alt="${esc(c.name)}">`).join('');
 }
 
 function bindEvents() {
@@ -90,7 +94,7 @@ function renderCharacters() {
     const selected = state.selected.includes(c.id);
     const img = c.costumes?.[0]?.image || c.image;
     return `<button class="character-card ${selected ? 'selected' : ''}" data-id="${esc(c.id)}" aria-pressed="${selected}">
-      <img loading="lazy" src="${esc(img)}" alt="${esc(c.name)}">
+      <img loading="lazy" src="${esc(imageSrc(img))}" alt="${esc(c.name)}" onerror="this.style.opacity='0'">
       <span class="character-name">${esc(c.name)}</span>
     </button>`;
   }).join('') || '<p class="muted">No waifu found.</p>';
@@ -115,7 +119,7 @@ function renderSelection() {
     const c = state.byId.get(id); if (!c) return '';
     const costume = selectedCostume(c);
     return `<div class="slot" data-slot-id="${esc(id)}" title="${esc(c.name)}">
-      <img src="${esc(costume?.image || c.image)}" alt="${esc(c.name)}">
+      <img src="${esc(imageSrc(costume?.image || c.image))}" alt="${esc(c.name)}">
       <span>${i + 1}</span>
     </div>`;
   }).join('');
@@ -141,7 +145,7 @@ function openCostume(id) {
   costumeList.innerHTML = costumes.map(co => {
     const active = state.costumeByCharacter.get(id) === co.id;
     return `<button class="costume-option ${active ? 'active' : ''}" data-costume="${esc(co.id)}" data-character="${esc(id)}">
-      <img loading="lazy" src="${esc(co.image)}" alt="${esc(co.name)}"><span>${esc(co.name)}</span>
+      <img loading="lazy" src="${esc(imageSrc(co.image))}" alt="${esc(co.name)}"><span>${esc(co.name)}</span>
     </button>`;
   }).join('');
   costumeList.querySelectorAll('.costume-option').forEach(btn => btn.addEventListener('click', () => {
@@ -235,10 +239,12 @@ function fitText(ctx,text,x,y,maxWidth,fontSize){let s=text;while(ctx.measureTex
 
 function loadImage(url){
   return new Promise((resolve,reject)=>{
-    const img=new Image(); img.crossOrigin='anonymous';
-    img.onload=()=>resolve(img); img.onerror=()=>{
-      const proxy=new Image(); proxy.crossOrigin='anonymous'; proxy.onload=()=>resolve(proxy); proxy.onerror=reject; proxy.src=`/api/image?url=${encodeURIComponent(url)}`;
-    }; img.src=`/api/image?url=${encodeURIComponent(url)}`;
+    const img=new Image();
+    img.crossOrigin='anonymous';
+    const timer=setTimeout(()=>{ img.src=''; reject(new Error('Image timeout')); },12000);
+    img.onload=()=>{ clearTimeout(timer); resolve(img); };
+    img.onerror=()=>{ clearTimeout(timer); reject(new Error('Image failed')); };
+    img.src=imageSrc(url);
   });
 }
 
@@ -253,7 +259,7 @@ async function loadPopular(){
     const r=await fetch('/api/popular'); if(!r.ok) throw new Error();
     const rows=await r.json();
     if(!rows.length){box.innerHTML='<p class="muted">No selections yet. Be the first to create the ranking.</p>';return}
-    box.innerHTML=rows.map((row,i)=>{const c=state.byId.get(row.waifu_id);if(!c)return '';const img=c.costumes?.[0]?.image||c.image;return `<div class="popular-row"><div class="rank ${i<3?'top':''}">${i+1}</div><img loading="lazy" src="${esc(img)}" alt="${esc(c.name)}"><div class="popular-name">${esc(c.name)}</div><div class="votes">${Number(row.vote_count||0).toLocaleString()} picks</div></div>`}).join('')||'<p class="muted">No selections yet.</p>';
+    box.innerHTML=rows.map((row,i)=>{const c=state.byId.get(row.waifu_id);if(!c)return '';const img=c.costumes?.[0]?.image||c.image;return `<div class="popular-row"><div class="rank ${i<3?'top':''}">${i+1}</div><img loading="lazy" src="${esc(imageSrc(img))}" alt="${esc(c.name)}" onerror="this.style.opacity='0'"><div class="popular-name">${esc(c.name)}</div><div class="votes">${Number(row.vote_count||0).toLocaleString()} picks</div></div>`}).join('')||'<p class="muted">No selections yet.</p>';
   }catch{box.innerHTML='<p class="muted">Popularity will appear after Cloudflare D1 is connected.</p>'}
 }
 
