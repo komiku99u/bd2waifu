@@ -45,7 +45,8 @@ function imageSrc(url) {
 
 function bindEvents() {
   searchInput.addEventListener('input', renderCharacters);
-  elementFilter.addEventListener('change', renderCharacters);
+  elementFilter.querySelectorAll('[data-element]').forEach(btn => btn.addEventListener('click', () => setElementFilter(btn.dataset.element)));
+  updateElementFilterUI();
   generateBtn.addEventListener('click', generateResult);
   $('#closeResult').addEventListener('click', () => resultModal.classList.add('hidden'));
   $('#downloadBtn').addEventListener('click', downloadResult);
@@ -56,6 +57,22 @@ function bindEvents() {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCostumeModal(); });
   document.querySelectorAll('.lang').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
   window.addEventListener('popstate', restoreFromUrl);
+}
+
+
+function setElementFilter(element) {
+  elementFilter.dataset.value = element;
+  updateElementFilterUI();
+  renderCharacters();
+}
+
+function updateElementFilterUI() {
+  const active = elementFilter.dataset.value || 'all';
+  elementFilter.querySelectorAll('[data-element]').forEach(btn => {
+    const isActive = btn.dataset.element === active;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
+  });
 }
 
 function setLanguage(lang) {
@@ -78,7 +95,7 @@ function renderAll() {
 
 function renderCharacters() {
   const q = searchInput.value.trim().toLowerCase();
-  const element = elementFilter.value;
+  const element = elementFilter.dataset.value || 'all';
   const filtered = state.characters.filter(c => {
     const matchName = c.name.toLowerCase().includes(q);
     const matchElement = element === 'all' || c.element === element;
