@@ -16,6 +16,9 @@ const searchInput = $('#searchInput');
 const elementFilter = $('#elementFilter');
 const resultModal = $('#resultModal');
 const resultCanvas = $('#resultCanvas');
+const costumeModal = $('#costumeModal');
+const costumeModalTitle = $('#costumeModalTitle');
+const costumeModalList = $('#costumeModalList');
 
 const i18n = {
   en: {
@@ -48,6 +51,9 @@ function bindEvents() {
   $('#downloadBtn').addEventListener('click', downloadResult);
   $('#shareBtn').addEventListener('click', shareResult);
   $('#copyBtn').addEventListener('click', copyShareLink);
+  $('#closeCostumeModal').addEventListener('click', closeCostumeModal);
+  $('#costumeModalBackdrop').addEventListener('click', closeCostumeModal);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCostumeModal(); });
   document.querySelectorAll('.lang').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
   window.addEventListener('popstate', restoreFromUrl);
 }
@@ -82,20 +88,12 @@ function renderCharacters() {
   grid.innerHTML = filtered.map(c => {
     const selected = state.selected.includes(c.id);
     const costumes = Array.isArray(c.costumes) ? c.costumes : [];
-    const open = state.openCostumeId === c.id && costumes.length > 0;
-    const current = selectedCostume(c);
     return `<article class="character-card ${selected ? 'selected' : ''}" data-id="${esc(c.id)}">
       <button class="character-main" type="button" aria-pressed="${selected}" aria-label="${selected ? 'Remove ' : 'Select '}${esc(c.name)}">
-        <img loading="lazy" src="${esc(imageSrc(current?.image || c.image))}" alt="${esc(c.name)}" onerror="this.style.opacity='0'">
+        <img loading="lazy" src="${esc(imageSrc(selectedCostume(c)?.image || c.image))}" alt="${esc(c.name)}" onerror="this.style.opacity='0'">
         <span class="character-name">${esc(c.name)}</span>
       </button>
-      ${costumes.length ? `<button class="costume-trigger" type="button" data-costume-toggle="${esc(c.id)}">${open ? i18n[state.lang].hideCostume : i18n[state.lang].chooseCostume}<span>⌄</span></button>
-      <div class="inline-costumes ${open ? '' : 'hidden'}">
-        ${costumes.map(co => `<button class="costume-option-inline ${current?.id === co.id ? 'active' : ''}" type="button" data-costume-id="${esc(co.id)}" data-character-id="${esc(c.id)}">
-          <img loading="lazy" src="${esc(imageSrc(co.image))}" alt="${esc(co.name)}">
-          <span>${esc(co.name)}</span>
-        </button>`).join('')}
-      </div>` : `<div class="no-costume">${i18n[state.lang].noCostume}</div>`}
+      ${costumes.length ? `<button class="costume-trigger" type="button" data-costume-toggle="${esc(c.id)}">${i18n[state.lang].chooseCostume}<span>⌄</span></button>` : `<div class="no-costume">${i18n[state.lang].noCostume}</div>`}
     </article>`;
   }).join('') || '<p class="muted">No character found.</p>';
 
@@ -105,18 +103,38 @@ function renderCharacters() {
   }));
   grid.querySelectorAll('[data-costume-toggle]').forEach(btn => btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const id = btn.dataset.costumeToggle;
-    state.openCostumeId = state.openCostumeId === id ? null : id;
-    renderCharacters();
+    openCostumeModal(btn.dataset.costumeToggle);
   }));
-  grid.querySelectorAll('[data-costume-id]').forEach(btn => btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const id = btn.dataset.characterId;
-    state.costumeByCharacter.set(id, btn.dataset.costumeId);
-    state.openCostumeId = id;
+}
+
+function openCostumeModal(characterId) {
+  const c = state.byId.get(characterId);
+  if (!c || !Array.isArray(c.costumes) || !c.costumes.length) return;
+
+  state.openCostumeId = characterId;
+  const current = selectedCostume(c);
+  costumeModalTitle.textContent = `${c.name} — Choose costume`;
+  costumeModalList.innerHTML = c.costumes.map(co => `<button class="costume-option ${current?.id === co.id ? 'active' : ''}" type="button" data-modal-costume-id="${esc(co.id)}" data-character-id="${esc(c.id)}">
+    <img loading="lazy" src="${esc(imageSrc(co.image))}" alt="${esc(co.name)}">
+    <span>${esc(co.name)}</span>
+  </button>`).join('');
+
+  costumeModal.classList.remove('hidden');
+  document.body.classList.add('modal-open');
+
+  costumeModalList.querySelectorAll('[data-modal-costume-id]').forEach(btn => btn.addEventListener('click', () => {
+    state.costumeByCharacter.set(btn.dataset.characterId, btn.dataset.modalCostumeId);
+    closeCostumeModal();
     renderCharacters();
     renderSelection();
   }));
+}
+
+function closeCostumeModal() {
+  if (!costumeModal) return;
+  costumeModal.classList.add('hidden');
+  document.body.classList.remove('modal-open');
+  state.openCostumeId = null;
 }
 
 function toggleCharacter(id) {
@@ -145,10 +163,8 @@ function renderSelection() {
   }).join('');
   for (let i = state.selected.length; i < 9; i++) strip.insertAdjacentHTML('beforeend', `<div class="slot empty"><span>+</span></div>`);
   strip.querySelectorAll('.slot[data-slot-id]').forEach(slot => slot.addEventListener('click', () => {
-    state.openCostumeId = slot.dataset.slotId;
-    renderCharacters();
-    const card = grid.querySelector(`[data-id="${CSS.escape(slot.dataset.slotId)}"]`);
-    card?.scrollIntoView({behavior:'smooth',block:'center'});
+    const c = state.byId.get(slot.dataset.slotId);
+    if (c?.costumes?.length) openCostumeModal(c.id);
   }));
 }
 
