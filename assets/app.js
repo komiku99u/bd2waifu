@@ -211,7 +211,7 @@ async function drawResult() {
   ctx.font = '900 54px Arial, sans-serif'; ctx.fillText('MY 9 WAIFU', W/2, 74);
   ctx.font = '700 21px Arial, sans-serif'; ctx.fillStyle = '#68796d'; ctx.fillText('THE CHARACTERS THAT SHAPED MY STORY', W/2, 108);
 
-  const margin=42, gap=14, top=135, tileW=(W-margin*2-gap*2)/3, tileH=350;
+  const margin=42, gap=14, top=135, tileW=(W-margin*2-gap*2)/3, tileH=tileW*(4/3);
   for (let i=0;i<9;i++) {
     const c=state.byId.get(state.selected[i]);
     const co=selectedCostume(c);
@@ -230,7 +230,7 @@ async function drawResult() {
     ctx.fillStyle='#fff'; ctx.textAlign='left'; ctx.font='900 21px Arial'; fitText(ctx,c.name,x+16,y+tileH-27,tileW-32,21);
     ctx.restore();
   }
-  ctx.fillStyle='#6a786d'; ctx.textAlign='center'; ctx.font='600 16px Arial'; ctx.fillText('my9waifu · make your own list',W/2,H-16);
+  ctx.fillStyle='#6a786d'; ctx.textAlign='center'; ctx.font='600 16px Arial'; ctx.fillText('my9waifu · make your own list',W/2,H-28);
 }
 
 function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
