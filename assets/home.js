@@ -8,7 +8,7 @@ const i18n = {
 
 async function init(){
   const data=await fetch('./data/master-data.json').then(r=>r.json());
-  state.characters=data.characters.filter(c=>WAIFU_IDS.includes(c.id));
+  state.characters=data.characters;
   state.byId=new Map(state.characters.map(c=>[c.id,c]));
   seedExample();
   bindEvents();
