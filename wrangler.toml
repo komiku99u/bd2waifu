@@ -1,0 +1,7 @@
+name = "my-9-waifu"
+compatibility_date = "2026-09-29"
+
+# For Cloudflare Pages, connect this D1 database to the project in
+# Pages > Settings > Functions > D1 database bindings.
+# Binding name must be: DB
+# database_id = "YOUR_D1_DATABASE_ID"

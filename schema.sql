@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS waifu_votes (
+  waifu_id TEXT PRIMARY KEY,
+  vote_count INTEGER NOT NULL DEFAULT 0
+);

@@ -1,0 +1,1917 @@
+{
+  "schema_version": "1.1",
+  "source_files": [
+    "char elemnt.md",
+    "char skin.md"
+  ],
+  "characters": [
+    {
+      "id": "lathel",
+      "name": "Lathel",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0a/Illust_inven_char000101.png/150px-Illust_inven_char000101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Lathel",
+      "costumes": [
+        {
+          "id": "lathel_herb-tracker",
+          "name": "Herb Tracker",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0a/Illust_inven_char000101.png/150px-Illust_inven_char000101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lathel/Herb_Tracker",
+          "limited": false
+        },
+        {
+          "id": "lathel_lonely-survivor",
+          "name": "Lonely Survivor",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/53/Illust_inven_char000102.png/150px-Illust_inven_char000102.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lathel/Lonely_Survivor",
+          "limited": false
+        },
+        {
+          "id": "lathel_homunculus",
+          "name": "Homunculus",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/d/dd/Illust_inven_char000103.png/150px-Illust_inven_char000103.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lathel/Homunculus",
+          "limited": false
+        },
+        {
+          "id": "lathel_dark-knight",
+          "name": "Dark Knight",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/75/Illust_inven_char000104.png/150px-Illust_inven_char000104.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lathel/Dark_Knight",
+          "limited": false
+        },
+        {
+          "id": "lathel_promise-of-vengeance",
+          "name": "Promise of Vengeance",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/48/Illust_inven_char000105.png/150px-Illust_inven_char000105.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lathel/Promise_of_Vengeance",
+          "limited": false
+        },
+        {
+          "id": "lathel_pool-party",
+          "name": "Pool Party",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/a/a7/Illust_inven_char000106.png/150px-Illust_inven_char000106.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lathel/Pool_Party",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "justia",
+      "name": "Justia",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/7/79/Illust_inven_char000202.png/150px-Illust_inven_char000202.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Justia",
+      "costumes": [
+        {
+          "id": "justia_knight-of-blood",
+          "name": "Knight of Blood",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/bb/Illust_inven_char000201.png/150px-Illust_inven_char000201.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Justia/Knight_of_Blood",
+          "limited": false
+        },
+        {
+          "id": "justia_white-reaper",
+          "name": "White Reaper",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/79/Illust_inven_char000202.png/150px-Illust_inven_char000202.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Justia/White_Reaper",
+          "limited": false
+        },
+        {
+          "id": "justia_blood-glutton",
+          "name": "Blood Glutton",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/12/Illust_inven_char000203.png/150px-Illust_inven_char000203.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Justia/Blood_Glutton",
+          "limited": false
+        },
+        {
+          "id": "justia_kendo-club",
+          "name": "Kendo Club",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/ed/Illust_inven_char000204.png/150px-Illust_inven_char000204.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Justia/Kendo_Club",
+          "limited": false
+        },
+        {
+          "id": "justia_pool-party",
+          "name": "Pool Party",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/01/Illust_inven_char000206.png/150px-Illust_inven_char000206.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Justia/Pool_Party",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "scheherazade",
+      "name": "Scheherazade",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/a/a9/Illust_inven_char000301.png/150px-Illust_inven_char000301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Scheherazade",
+      "costumes": [
+        {
+          "id": "scheherazade_the-lapis-witch",
+          "name": "The Lapis Witch",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/a/a9/Illust_inven_char000301.png/150px-Illust_inven_char000301.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Scheherazade/The_Lapis_Witch",
+          "limited": false
+        },
+        {
+          "id": "scheherazade_the-magic-school-professor",
+          "name": "The Magic School Professor",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/92/Illust_inven_char000303.png/150px-Illust_inven_char000303.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Scheherazade/The_Magic_School_Professor",
+          "limited": false
+        },
+        {
+          "id": "scheherazade_code-name-s",
+          "name": "Code Name S",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/48/Illust_inven_char000304.png/150px-Illust_inven_char000304.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Scheherazade/Code_Name_S",
+          "limited": false
+        },
+        {
+          "id": "scheherazade_pool-party",
+          "name": "Pool Party",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/2b/Illust_inven_char000306.png/150px-Illust_inven_char000306.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Scheherazade/Pool_Party",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "gray",
+      "name": "Gray",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/5/55/Illust_inven_char000401.png/150px-Illust_inven_char000401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Gray",
+      "costumes": [
+        {
+          "id": "gray_the-sharpshooter-of-the-mist",
+          "name": "The Sharpshooter of the Mist",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/55/Illust_inven_char000401.png/150px-Illust_inven_char000401.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Gray/The_Sharpshooter_of_the_Mist",
+          "limited": false
+        },
+        {
+          "id": "gray_b-rank-manager",
+          "name": "B-Rank Manager",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/20/Illust_inven_char000402.png/150px-Illust_inven_char000402.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Gray/B-Rank_Manager",
+          "limited": false
+        },
+        {
+          "id": "gray_vanguard",
+          "name": "Vanguard",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/91/Illust_inven_char000403.png/150px-Illust_inven_char000403.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Gray/Vanguard",
+          "limited": false
+        },
+        {
+          "id": "gray_pool-party",
+          "name": "Pool Party",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/52/Illust_inven_char000406.png/150px-Illust_inven_char000406.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Gray/Pool_Party",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "rou",
+      "name": "Rou",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/e/ef/Illust_inven_char000501.png/150px-Illust_inven_char000501.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Rou",
+      "costumes": [
+        {
+          "id": "rou_white-cat",
+          "name": "White Cat",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/ef/Illust_inven_char000501.png/150px-Illust_inven_char000501.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rou/White_Cat",
+          "limited": false
+        },
+        {
+          "id": "rou_red-riding-hood",
+          "name": "Red Riding Hood",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/98/Illust_inven_char000502.png/150px-Illust_inven_char000502.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rou/Red_Riding_Hood",
+          "limited": false
+        },
+        {
+          "id": "rou_nature-s-claw",
+          "name": "Nature's Claw",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d3/Illust_inven_char000504.png/150px-Illust_inven_char000504.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rou/Nature%27s_Claw",
+          "limited": false
+        },
+        {
+          "id": "rou_stray-cat",
+          "name": "Stray Cat",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c4/Illust_inven_char000506.png/150px-Illust_inven_char000506.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rou/Stray_Cat",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "olstein",
+      "name": "Olstein",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e2/Illust_inven_char000601.png/150px-Illust_inven_char000601.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Olstein",
+      "costumes": [
+        {
+          "id": "olstein_the-fiend-scholar",
+          "name": "The Fiend Scholar",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e2/Illust_inven_char000601.png/150px-Illust_inven_char000601.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Olstein/The_Fiend_Scholar",
+          "limited": false
+        },
+        {
+          "id": "olstein_sage-of-blue-clouds",
+          "name": "Sage of Blue Clouds",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f6/Illust_inven_char000604.png/150px-Illust_inven_char000604.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Olstein/Sage_of_Blue_Clouds",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "eclipse",
+      "name": "Eclipse",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/0/00/Illust_inven_char000701.png/150px-Illust_inven_char000701.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Eclipse",
+      "costumes": [
+        {
+          "id": "eclipse_dimension-witch",
+          "name": "Dimension Witch",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/00/Illust_inven_char000701.png/150px-Illust_inven_char000701.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eclipse/Dimension_Witch",
+          "limited": false
+        },
+        {
+          "id": "eclipse_nightmare-bunny",
+          "name": "Nightmare Bunny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/a/ad/Illust_inven_char000706.png/150px-Illust_inven_char000706.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eclipse/Nightmare_Bunny",
+          "limited": true
+        },
+        {
+          "id": "eclipse_beach-vacation",
+          "name": "Beach Vacation",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/28/Illust_inven_char000707.png/150px-Illust_inven_char000707.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eclipse/Beach_Vacation",
+          "limited": false
+        },
+        {
+          "id": "eclipse_dream-bride",
+          "name": "Dream Bride",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/23/Illust_inven_char000708.png/150px-Illust_inven_char000708.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eclipse/Dream_Bride",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "rubia",
+      "name": "Rubia",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/1c/Illust_inven_char000801.png/150px-Illust_inven_char000801.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Rubia",
+      "costumes": [
+        {
+          "id": "rubia_thorn-of-the-desert",
+          "name": "Thorn of the Desert",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/1c/Illust_inven_char000801.png/150px-Illust_inven_char000801.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rubia/Thorn_of_the_Desert",
+          "limited": false
+        },
+        {
+          "id": "rubia_the-empress-of-the-ocean",
+          "name": "The Empress of the Ocean",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/77/Illust_inven_char000804.png/150px-Illust_inven_char000804.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rubia/The_Empress_of_the_Ocean",
+          "limited": false
+        },
+        {
+          "id": "rubia_maid-name-c",
+          "name": "Maid Name C",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/eb/Illust_inven_char000806.png/150px-Illust_inven_char000806.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rubia/Maid_Name_C",
+          "limited": false
+        },
+        {
+          "id": "rubia_maid-bikini",
+          "name": "Maid Bikini",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/87/Illust_inven_char000807.png/150px-Illust_inven_char000807.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rubia/Maid_Bikini",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "sylvia",
+      "name": "Sylvia",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/3/32/Illust_inven_char001001.png/150px-Illust_inven_char001001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Sylvia",
+      "costumes": [
+        {
+          "id": "sylvia_desert-flower",
+          "name": "Desert Flower",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/3/32/Illust_inven_char001001.png/150px-Illust_inven_char001001.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sylvia/Desert_Flower",
+          "limited": false
+        },
+        {
+          "id": "sylvia_the-sword-queen",
+          "name": "The Sword Queen",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/07/Illust_inven_char001002.png/150px-Illust_inven_char001002.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sylvia/The_Sword_Queen",
+          "limited": false
+        },
+        {
+          "id": "sylvia_admiral",
+          "name": "Admiral",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/83/Illust_inven_char001004.png/150px-Illust_inven_char001004.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sylvia/Admiral",
+          "limited": false
+        },
+        {
+          "id": "sylvia_bikini-agent",
+          "name": "Bikini Agent",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/3/3c/Illust_inven_char001006.png/150px-Illust_inven_char001006.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sylvia/Bikini_Agent",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "teresse",
+      "name": "Teresse",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/9/97/Illust_inven_char001101.png/150px-Illust_inven_char001101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Teresse",
+      "costumes": [
+        {
+          "id": "teresse_angel-of-destruction",
+          "name": "Angel of Destruction",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/97/Illust_inven_char001101.png/150px-Illust_inven_char001101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Teresse/Angel_of_Destruction",
+          "limited": false
+        },
+        {
+          "id": "teresse_medical-club",
+          "name": "Medical Club",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d6/Illust_inven_char001106.png/150px-Illust_inven_char001106.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Teresse/Medical_Club",
+          "limited": false
+        },
+        {
+          "id": "teresse_beachside-angel",
+          "name": "Beachside Angel",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b6/Illust_inven_char001107.png/150px-Illust_inven_char001107.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Teresse/Beachside_Angel",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "liatris",
+      "name": "Liatris",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/6/61/Illust_inven_char001201.png/150px-Illust_inven_char001201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Liatris",
+      "costumes": [
+        {
+          "id": "liatris_rodev-s-star",
+          "name": "Rodev's Star",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/61/Illust_inven_char001201.png/150px-Illust_inven_char001201.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Liatris/Rodev%27s_Star",
+          "limited": false
+        },
+        {
+          "id": "liatris_neon-stalker",
+          "name": "Neon Stalker",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/98/Illust_inven_char001206.png/150px-Illust_inven_char001206.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Liatris/Neon_Stalker",
+          "limited": false
+        },
+        {
+          "id": "liatris_maid-name-r",
+          "name": "Maid Name R",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/15/Illust_inven_char001207.png/150px-Illust_inven_char001207.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Liatris/Maid_Name_R",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "alec",
+      "name": "Alec",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7c/Illust_inven_char060301.png/150px-Illust_inven_char060301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Alec",
+      "costumes": [
+        {
+          "id": "alec_the-destruction",
+          "name": "The Destruction",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7c/Illust_inven_char060301.png/150px-Illust_inven_char060301.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Alec/The_Destruction",
+          "limited": false
+        },
+        {
+          "id": "alec_sword-breaker",
+          "name": "Sword Breaker",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/3/3c/Illust_inven_char060302.png/150px-Illust_inven_char060302.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Alec/Sword_Breaker",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "celia",
+      "name": "Celia",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0a/Illust_inven_char060401.png/150px-Illust_inven_char060401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Celia",
+      "costumes": [
+        {
+          "id": "celia_the-curse",
+          "name": "The Curse",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0a/Illust_inven_char060401.png/150px-Illust_inven_char060401.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Celia/The_Curse",
+          "limited": false
+        },
+        {
+          "id": "celia_descendant-of-the-great-witch",
+          "name": "Descendant of the Great Witch",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/6b/Illust_inven_char060402.png/150px-Illust_inven_char060402.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Celia/Descendant_of_the_Great_Witch",
+          "limited": false
+        },
+        {
+          "id": "celia_masquerade-bunny",
+          "name": "Masquerade Bunny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/28/Illust_inven_char060403.png/150px-Illust_inven_char060403.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Celia/Masquerade_Bunny",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "anastasia",
+      "name": "Anastasia",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/a/ae/Illust_inven_char060501.png/150px-Illust_inven_char060501.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Anastasia",
+      "costumes": [
+        {
+          "id": "anastasia_gentle-maid",
+          "name": "Gentle Maid",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/a/ae/Illust_inven_char060501.png/150px-Illust_inven_char060501.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Anastasia/Gentle_Maid",
+          "limited": false
+        },
+        {
+          "id": "anastasia_fire-graffiti",
+          "name": "Fire Graffiti",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7c/Illust_inven_char060502.png/150px-Illust_inven_char060502.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Anastasia/Fire_Graffiti",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "lecliss",
+      "name": "Lecliss",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f6/Illust_inven_char060601.png/150px-Illust_inven_char060601.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Lecliss",
+      "costumes": [
+        {
+          "id": "lecliss_killer-doll",
+          "name": "Killer Doll",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f6/Illust_inven_char060601.png/150px-Illust_inven_char060601.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lecliss/Killer_Doll",
+          "limited": false
+        },
+        {
+          "id": "lecliss_android-queen",
+          "name": "Android Queen",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b1/Illust_inven_char060602.png/150px-Illust_inven_char060602.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Lecliss/Android_Queen",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "rafina",
+      "name": "Rafina",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/e/eb/Illust_inven_char060701.png/150px-Illust_inven_char060701.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Rafina",
+      "costumes": [
+        {
+          "id": "rafina_steel-engine",
+          "name": "Steel Engine",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/eb/Illust_inven_char060701.png/150px-Illust_inven_char060701.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rafina/Steel_Engine",
+          "limited": false
+        },
+        {
+          "id": "rafina_code-name-a",
+          "name": "Code Name A",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/bf/Illust_inven_char060702.png/150px-Illust_inven_char060702.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rafina/Code_Name_A",
+          "limited": false
+        },
+        {
+          "id": "rafina_game-club",
+          "name": "Game Club",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f9/Illust_inven_char060706.png/150px-Illust_inven_char060706.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Rafina/Game_Club",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "elise",
+      "name": "Elise",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/9/94/Illust_inven_char060801.png/150px-Illust_inven_char060801.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Elise",
+      "costumes": [
+        {
+          "id": "elise_lovely-lady",
+          "name": "Lovely Lady",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/94/Illust_inven_char060801.png/150px-Illust_inven_char060801.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Elise/Lovely_Lady",
+          "limited": false
+        },
+        {
+          "id": "elise_code-name-o",
+          "name": "Code Name O",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/64/Illust_inven_char060802.png/150px-Illust_inven_char060802.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Elise/Code_Name_O",
+          "limited": false
+        },
+        {
+          "id": "elise_naive-lady",
+          "name": "Naive Lady",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/5b/Illust_inven_char060804.png/150px-Illust_inven_char060804.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Elise/Naive_Lady",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "helena",
+      "name": "Helena",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/9/98/Illust_inven_char061001.png/150px-Illust_inven_char061001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Helena",
+      "costumes": [
+        {
+          "id": "helena_top-idol",
+          "name": "Top Idol",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/98/Illust_inven_char061001.png/150px-Illust_inven_char061001.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Helena/Top_Idol",
+          "limited": false
+        },
+        {
+          "id": "helena_b-rank-idol",
+          "name": "B-Rank Idol",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7b/Illust_inven_char061002.png/150px-Illust_inven_char061002.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Helena/B-Rank_Idol",
+          "limited": false
+        },
+        {
+          "id": "helena_sunny-inn-hand",
+          "name": "Sunny Inn Hand",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/47/Illust_inven_char061003.png/150px-Illust_inven_char061003.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Helena/Sunny_Inn_Hand",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "eleaneer",
+      "name": "Eleaneer",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/12/Illust_inven_char061101.png/150px-Illust_inven_char061101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Eleaneer",
+      "costumes": [
+        {
+          "id": "eleaneer_piercing-magic-bow",
+          "name": "Piercing Magic Bow",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/12/Illust_inven_char061101.png/150px-Illust_inven_char061101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eleaneer/Piercing_Magic_Bow",
+          "limited": false
+        },
+        {
+          "id": "eleaneer_b-rank-idol",
+          "name": "B-Rank Idol",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/84/Illust_inven_char061102.png/150px-Illust_inven_char061102.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eleaneer/B-Rank_Idol",
+          "limited": false
+        },
+        {
+          "id": "eleaneer_shadow-bunny",
+          "name": "Shadow Bunny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/83/Illust_inven_char061103.png/150px-Illust_inven_char061103.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eleaneer/Shadow_Bunny",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "seir",
+      "name": "Seir",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/29/Illust_inven_char101101.png/150px-Illust_inven_char101101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Seir",
+      "costumes": [
+        {
+          "id": "seir_demon-s-daughter",
+          "name": "Demon's Daughter",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/29/Illust_inven_char101101.png/150px-Illust_inven_char101101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Seir/Demon%27s_Daughter",
+          "limited": false
+        },
+        {
+          "id": "seir_b-rank-idol",
+          "name": "B-Rank Idol",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/16/Illust_inven_char101102.png/150px-Illust_inven_char101102.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Seir/B-Rank_Idol",
+          "limited": false
+        },
+        {
+          "id": "seir_new-hire",
+          "name": "New Hire",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e5/Illust_inven_char101103.png/150px-Illust_inven_char101103.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Seir/New_Hire",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "angelica",
+      "name": "Angelica",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c7/Illust_inven_char066401.png/150px-Illust_inven_char066401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Angelica",
+      "costumes": [
+        {
+          "id": "angelica_the-fallen",
+          "name": "The Fallen",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c7/Illust_inven_char066401.png/150px-Illust_inven_char066401.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Angelica/The_Fallen",
+          "limited": false
+        },
+        {
+          "id": "angelica_pool-party",
+          "name": "Pool Party",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c0/Illust_inven_char066402.png/150px-Illust_inven_char066402.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Angelica/Pool_Party",
+          "limited": false
+        },
+        {
+          "id": "angelica_neon-savior",
+          "name": "Neon Savior",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/84/Illust_inven_char066403.png/150px-Illust_inven_char066403.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Angelica/Neon_Savior",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "glacia",
+      "name": "Glacia",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b5/Illust_inven_char066902.png/150px-Illust_inven_char066902.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Glacia",
+      "costumes": [
+        {
+          "id": "glacia_alice",
+          "name": "Alice",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b5/Illust_inven_char066902.png/150px-Illust_inven_char066902.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Glacia/Alice",
+          "limited": false
+        },
+        {
+          "id": "glacia_disciplinary-committee",
+          "name": "Disciplinary Committee",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/45/Illust_inven_char066906.png/150px-Illust_inven_char066906.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Glacia/Disciplinary_Committee",
+          "limited": false
+        },
+        {
+          "id": "glacia_heavenly-guardian-successor",
+          "name": "Heavenly Guardian Successor",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/70/Illust_inven_char066907.png/150px-Illust_inven_char066907.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Glacia/Heavenly_Guardian_Successor",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "ventana",
+      "name": "Ventana",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0e/Illust_inven_char067002.png/150px-Illust_inven_char067002.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Ventana",
+      "costumes": [
+        {
+          "id": "ventana_snow-white",
+          "name": "Snow White",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0e/Illust_inven_char067002.png/150px-Illust_inven_char067002.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Ventana/Snow_White",
+          "limited": false
+        },
+        {
+          "id": "ventana_comeback-idol",
+          "name": "Comeback Idol",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b1/Illust_inven_char067003.png/150px-Illust_inven_char067003.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Ventana/Comeback_Idol",
+          "limited": false
+        },
+        {
+          "id": "ventana_onsen-practitioner",
+          "name": "Onsen Practitioner",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/fb/Illust_inven_char067004.png/150px-Illust_inven_char067004.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Ventana/Onsen_Practitioner",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "diana",
+      "name": "Diana",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/0/06/Illust_inven_char002401.png/150px-Illust_inven_char002401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Diana",
+      "costumes": [
+        {
+          "id": "diana_adventurer-of-the-unknown",
+          "name": "Adventurer of the Unknown",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/06/Illust_inven_char002401.png/150px-Illust_inven_char002401.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Diana/Adventurer_of_the_Unknown",
+          "limited": false
+        },
+        {
+          "id": "diana_magical-innovator",
+          "name": "Magical Innovator",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d8/Illust_inven_char002403.png/150px-Illust_inven_char002403.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Diana/Magical_Innovator",
+          "limited": false
+        },
+        {
+          "id": "diana_anti-dystopia",
+          "name": "Anti-dystopia",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/eb/Illust_inven_char002406.png/150px-Illust_inven_char002406.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Diana/Anti-dystopia",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "zenith",
+      "name": "Zenith",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/5/5c/Illust_inven_char061402.png/150px-Illust_inven_char061402.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Zenith",
+      "costumes": [
+        {
+          "id": "zenith_robin-hood",
+          "name": "Robin Hood",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/5c/Illust_inven_char061402.png/150px-Illust_inven_char061402.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Zenith/Robin_Hood",
+          "limited": false
+        },
+        {
+          "id": "zenith_poolside-guardian",
+          "name": "Poolside Guardian",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/45/Illust_inven_char061404.png/150px-Illust_inven_char061404.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Zenith/Poolside_Guardian",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "yuri",
+      "name": "Yuri",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/5/55/Illust_inven_char065102.png/150px-Illust_inven_char065102.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Yuri",
+      "costumes": [
+        {
+          "id": "yuri_whitebolt",
+          "name": "Whitebolt",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/55/Illust_inven_char065102.png/150px-Illust_inven_char065102.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Yuri/Whitebolt",
+          "limited": false
+        },
+        {
+          "id": "yuri_comeback-idol",
+          "name": "Comeback Idol",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/81/Illust_inven_char065103.png/150px-Illust_inven_char065103.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Yuri/Comeback_Idol",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "dalvi",
+      "name": "Dalvi",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/4/44/Illust_inven_char061302.png/150px-Illust_inven_char061302.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Dalvi",
+      "costumes": [
+        {
+          "id": "dalvi_bright-moon",
+          "name": "Bright Moon",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/44/Illust_inven_char061302.png/150px-Illust_inven_char061302.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Dalvi/Bright_Moon",
+          "limited": false
+        },
+        {
+          "id": "dalvi_summer-vacation",
+          "name": "Summer Vacation",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/ff/Illust_inven_char061305.png/150px-Illust_inven_char061305.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Dalvi/Summer_Vacation",
+          "limited": false
+        },
+        {
+          "id": "dalvi_tricky-lover",
+          "name": "Tricky Lover",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e4/Illust_inven_char061306.png/150px-Illust_inven_char061306.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Dalvi/Tricky_Lover",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "nartas",
+      "name": "Nartas",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/a/ab/Illust_inven_char065802.png/150px-Illust_inven_char065802.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Nartas",
+      "costumes": [
+        {
+          "id": "nartas_anonymous-sage",
+          "name": "Anonymous Sage",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/a/ab/Illust_inven_char065802.png/150px-Illust_inven_char065802.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Nartas/Anonymous_Sage",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "granhildr",
+      "name": "Granhildr",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/3/3a/Illust_inven_char067101.png/150px-Illust_inven_char067101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Granhildr",
+      "costumes": [
+        {
+          "id": "granhildr_the-void",
+          "name": "The Void",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/3/3a/Illust_inven_char067101.png/150px-Illust_inven_char067101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Granhildr/The_Void",
+          "limited": false
+        },
+        {
+          "id": "granhildr_comeback-idol",
+          "name": "Comeback Idol",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/9e/Illust_inven_char067102.png/150px-Illust_inven_char067102.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Granhildr/Comeback_Idol",
+          "limited": false
+        },
+        {
+          "id": "granhildr_boo-ghost",
+          "name": "Boo Ghost",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/a/a9/Illust_inven_char067103.png/150px-Illust_inven_char067103.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Granhildr/Boo_Ghost",
+          "limited": false
+        },
+        {
+          "id": "granhildr_combat-medic",
+          "name": "Combat Medic",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/88/Illust_inven_char067104.png/150px-Illust_inven_char067104.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Granhildr/Combat_Medic",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "refithea",
+      "name": "Refithea",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/11/Illust_inven_char066801.png/150px-Illust_inven_char066801.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Refithea",
+      "costumes": [
+        {
+          "id": "refithea_the-gluttonous",
+          "name": "The Gluttonous",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/11/Illust_inven_char066801.png/150px-Illust_inven_char066801.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Refithea/The_Gluttonous",
+          "limited": false
+        },
+        {
+          "id": "refithea_pure-white-blessing",
+          "name": "Pure White Blessing",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/15/Illust_inven_char066802.png/150px-Illust_inven_char066802.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Refithea/Pure_White_Blessing",
+          "limited": false
+        },
+        {
+          "id": "refithea_poolside-fairy",
+          "name": "Poolside Fairy",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/c/ca/Illust_inven_char066803.png/150px-Illust_inven_char066803.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Refithea/Poolside_Fairy",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "loen",
+      "name": "Loen",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/8/80/Illust_inven_char003201.png/150px-Illust_inven_char003201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Loen",
+      "costumes": [
+        {
+          "id": "loen_last-hope",
+          "name": "Last Hope",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/80/Illust_inven_char003201.png/150px-Illust_inven_char003201.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Loen/Last_Hope",
+          "limited": false
+        },
+        {
+          "id": "loen_track-and-field-team",
+          "name": "Track and Field Team",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7b/Illust_inven_char003202.png/150px-Illust_inven_char003202.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Loen/Track_and_Field_Team",
+          "limited": false
+        },
+        {
+          "id": "loen_celebrity-bunny",
+          "name": "Celebrity Bunny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0a/Illust_inven_char003203.png/150px-Illust_inven_char003203.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Loen/Celebrity_Bunny",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "roxy",
+      "name": "Roxy",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d8/Illust_inven_char020101.png/150px-Illust_inven_char020101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Roxy",
+      "costumes": [
+        {
+          "id": "roxy_respected-master",
+          "name": "Respected Master",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d8/Illust_inven_char020101.png/150px-Illust_inven_char020101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Roxy/Respected_Master",
+          "limited": true
+        },
+        {
+          "id": "roxy_emerging-desire",
+          "name": "Emerging Desire",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/fb/Illust_inven_char020102.png/150px-Illust_inven_char020102.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Roxy/Emerging_Desire",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "eris",
+      "name": "Eris",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/1d/Illust_inven_char020001.png/150px-Illust_inven_char020001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Eris",
+      "costumes": [
+        {
+          "id": "eris_esteemed-adventurer",
+          "name": "Esteemed Adventurer",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/1d/Illust_inven_char020001.png/150px-Illust_inven_char020001.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eris/Esteemed_Adventurer",
+          "limited": true
+        },
+        {
+          "id": "eris_your-very-own-cat",
+          "name": "Your Very Own Cat",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e5/Illust_inven_char020002.png/150px-Illust_inven_char020002.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Eris/Your_Very_Own_Cat",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "venaka",
+      "name": "Venaka",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/5/58/Illust_inven_char067202.png/150px-Illust_inven_char067202.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Venaka",
+      "costumes": [
+        {
+          "id": "venaka_dj",
+          "name": "DJ",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b3/Illust_inven_char067201.png/150px-Illust_inven_char067201.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Venaka/DJ",
+          "limited": false
+        },
+        {
+          "id": "venaka_wind-dancer",
+          "name": "Wind Dancer",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/58/Illust_inven_char067202.png/150px-Illust_inven_char067202.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Venaka/Wind_Dancer",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "nebris",
+      "name": "Nebris",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/c/cb/Illust_inven_char003301.png/150px-Illust_inven_char003301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Nebris",
+      "costumes": [
+        {
+          "id": "nebris_labyrinth-gatekeeper",
+          "name": "Labyrinth Gatekeeper",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/c/cb/Illust_inven_char003301.png/150px-Illust_inven_char003301.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Nebris/Labyrinth_Gatekeeper",
+          "limited": false
+        },
+        {
+          "id": "nebris_laid-back-lifeguard",
+          "name": "Laid-back Lifeguard",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/65/Illust_inven_char003302.png/150px-Illust_inven_char003302.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Nebris/Laid-back_Lifeguard",
+          "limited": false
+        },
+        {
+          "id": "nebris_new-hire",
+          "name": "New Hire",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/be/Illust_inven_char003303.png/150px-Illust_inven_char003303.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Nebris/New_Hire",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "sacred_justia",
+      "name": "Sacred Justia",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e8/Illust_inven_char003501.png/150px-Illust_inven_char003501.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Sacred_Justia",
+      "costumes": [
+        {
+          "id": "sacred_justia_reclaimed-destiny",
+          "name": "Reclaimed Destiny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e8/Illust_inven_char003501.png/150px-Illust_inven_char003501.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sacred_Justia/Reclaimed_Destiny",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "levia",
+      "name": "Levia",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/f/fa/Illust_inven_char067302.png/150px-Illust_inven_char067302.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Levia",
+      "costumes": [
+        {
+          "id": "levia_track-and-field-captain",
+          "name": "Track and Field Captain",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f7/Illust_inven_char067301.png/150px-Illust_inven_char067301.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Levia/Track_and_Field_Captain",
+          "limited": false
+        },
+        {
+          "id": "levia_night-of-jealousy",
+          "name": "Night of Jealousy",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/fa/Illust_inven_char067302.png/150px-Illust_inven_char067302.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Levia/Night_of_Jealousy",
+          "limited": false
+        },
+        {
+          "id": "levia_overheat",
+          "name": "Overheat",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/47/Illust_inven_char067303.png/150px-Illust_inven_char067303.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Levia/Overheat",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "morpeah",
+      "name": "Morpeah",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/0/02/Illust_inven_char003403.png/150px-Illust_inven_char003403.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Morpeah",
+      "costumes": [
+        {
+          "id": "morpeah_beach-vacation",
+          "name": "Beach Vacation",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/75/Illust_inven_char003401.png/150px-Illust_inven_char003401.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Morpeah/Beach_Vacation",
+          "limited": false
+        },
+        {
+          "id": "morpeah_daydream-bunny",
+          "name": "Daydream Bunny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/18/Illust_inven_char003402.png/150px-Illust_inven_char003402.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Morpeah/Daydream_Bunny",
+          "limited": false
+        },
+        {
+          "id": "morpeah_apostle",
+          "name": "Apostle",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/02/Illust_inven_char003403.png/150px-Illust_inven_char003403.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Morpeah/Apostle",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "michaela",
+      "name": "Michaela",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7f/Illust_inven_char067403.png/150px-Illust_inven_char067403.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Michaela",
+      "costumes": [
+        {
+          "id": "michaela_beachside-justice",
+          "name": "Beachside Justice",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/9e/Illust_inven_char067401.png/150px-Illust_inven_char067401.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Michaela/Beachside_Justice",
+          "limited": false
+        },
+        {
+          "id": "michaela_queen-of-signatures",
+          "name": "Queen of Signatures",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/22/Illust_inven_char067402.png/150px-Illust_inven_char067402.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Michaela/Queen_of_Signatures",
+          "limited": false
+        },
+        {
+          "id": "michaela_acting-archbishop",
+          "name": "Acting Archbishop",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7f/Illust_inven_char067403.png/150px-Illust_inven_char067403.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Michaela/Acting_Archbishop",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "yomi",
+      "name": "Yomi",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/7/77/Illust_inven_char020201.png/150px-Illust_inven_char020201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Yomi",
+      "costumes": [
+        {
+          "id": "yomi_gentle-destroyer",
+          "name": "Gentle Destroyer",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/77/Illust_inven_char020201.png/150px-Illust_inven_char020201.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Yomi/Gentle_Destroyer",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "yozakura",
+      "name": "Yozakura",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/8/82/Illust_inven_char020301.png/150px-Illust_inven_char020301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Yozakura",
+      "costumes": [
+        {
+          "id": "yozakura_fist-of-conviction",
+          "name": "Fist of Conviction",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/82/Illust_inven_char020301.png/150px-Illust_inven_char020301.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Yozakura/Fist_of_Conviction",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "hikage",
+      "name": "Hikage",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/6/64/Illust_inven_char020501.png/150px-Illust_inven_char020501.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Hikage",
+      "costumes": [
+        {
+          "id": "hikage_kind-ruthlessness",
+          "name": "Kind Ruthlessness",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/64/Illust_inven_char020501.png/150px-Illust_inven_char020501.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Hikage/Kind_Ruthlessness",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "yumi",
+      "name": "Yumi",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f3/Illust_inven_char020401.png/150px-Illust_inven_char020401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Yumi",
+      "costumes": [
+        {
+          "id": "yumi_dancing-snowflake",
+          "name": "Dancing Snowflake",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f3/Illust_inven_char020401.png/150px-Illust_inven_char020401.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Yumi/Dancing_Snowflake",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "luvencia",
+      "name": "Luvencia",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/6/6d/Illust_inven_char067502.png/150px-Illust_inven_char067502.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Luvencia",
+      "costumes": [
+        {
+          "id": "luvencia_deal-snatcher",
+          "name": "Deal Snatcher",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/6d/Illust_inven_char067502.png/150px-Illust_inven_char067502.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Luvencia/Deal_Snatcher",
+          "limited": false
+        },
+        {
+          "id": "luvencia_wild-dog",
+          "name": "Wild Dog",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/59/Illust_inven_char067503.png/150px-Illust_inven_char067503.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Luvencia/Wild_Dog",
+          "limited": false
+        },
+        {
+          "id": "luvencia_ocean-vanguard",
+          "name": "Ocean Vanguard",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/00/Illust_inven_char067504.png/150px-Illust_inven_char067504.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Luvencia/Ocean_Vanguard",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "liberta",
+      "name": "Liberta",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/6/6d/Illust_inven_char003801.png/150px-Illust_inven_char003801.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Liberta",
+      "costumes": [
+        {
+          "id": "liberta_dark-saintess",
+          "name": "Dark Saintess",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/6d/Illust_inven_char003801.png/150px-Illust_inven_char003801.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Liberta/Dark_Saintess",
+          "limited": false
+        },
+        {
+          "id": "liberta_onsen-manager",
+          "name": "Onsen Manager",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/8a/Illust_inven_char003802.png/150px-Illust_inven_char003802.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Liberta/Onsen_Manager",
+          "limited": false
+        },
+        {
+          "id": "liberta_miracle-rose",
+          "name": "Miracle Rose",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/3/37/Illust_inven_char003803.png/150px-Illust_inven_char003803.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Liberta/Miracle_Rose",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "blade",
+      "name": "Blade",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/25/Illust_inven_char003701.png/150px-Illust_inven_char003701.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Blade",
+      "costumes": [
+        {
+          "id": "blade_apostle",
+          "name": "Apostle",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/25/Illust_inven_char003701.png/150px-Illust_inven_char003701.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Blade/Apostle",
+          "limited": false
+        },
+        {
+          "id": "blade_onsen-swordfighter",
+          "name": "Onsen Swordfighter",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/6/6b/Illust_inven_char003702.png/150px-Illust_inven_char003702.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Blade/Onsen_Swordfighter",
+          "limited": false
+        },
+        {
+          "id": "blade_young-lady",
+          "name": "Young Lady",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/5/5d/Illust_inven_char003703.png/150px-Illust_inven_char003703.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Blade/Young_Lady",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "wilhelmina",
+      "name": "Wilhelmina",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4b/Illust_inven_char067601.png/150px-Illust_inven_char067601.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Wilhelmina",
+      "costumes": [
+        {
+          "id": "wilhelmina_iron-monarch",
+          "name": "Iron Monarch",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4b/Illust_inven_char067601.png/150px-Illust_inven_char067601.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Wilhelmina/Iron_Monarch",
+          "limited": false
+        },
+        {
+          "id": "wilhelmina_water-park-queen",
+          "name": "Water Park Queen",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/9c/Illust_inven_char067603.png/150px-Illust_inven_char067603.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Wilhelmina/Water_Park_Queen",
+          "limited": false
+        },
+        {
+          "id": "wilhelmina_frozen-queen",
+          "name": "Frozen Queen",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/98/Illust_inven_char067604.png/150px-Illust_inven_char067604.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Wilhelmina/Frozen_Queen",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "goblin_slayer",
+      "name": "Goblin Slayer",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/2f/Illust_inven_char020601.png/150px-Illust_inven_char020601.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Goblin_Slayer",
+      "costumes": [
+        {
+          "id": "goblin_slayer_orcbolg",
+          "name": "Orcbolg",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/2f/Illust_inven_char020601.png/150px-Illust_inven_char020601.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Goblin_Slayer/Orcbolg",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "priestess",
+      "name": "Priestess",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b8/Illust_inven_char020701.png/150px-Illust_inven_char020701.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Priestess",
+      "costumes": [
+        {
+          "id": "priestess_earth-mother-believer",
+          "name": "Earth Mother Believer",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b8/Illust_inven_char020701.png/150px-Illust_inven_char020701.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Priestess/Earth_Mother_Believer",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "high_elf_archer",
+      "name": "High Elf Archer",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e1/Illust_inven_char020801.png/150px-Illust_inven_char020801.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/High_Elf_Archer",
+      "costumes": [
+        {
+          "id": "high_elf_archer_daughter-of-starwind",
+          "name": "Daughter of Starwind",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e1/Illust_inven_char020801.png/150px-Illust_inven_char020801.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/High_Elf_Archer/Daughter_of_Starwind",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "sword_maiden",
+      "name": "Sword Maiden",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/25/Illust_inven_char020901.png/150px-Illust_inven_char020901.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Sword_Maiden",
+      "costumes": [
+        {
+          "id": "sword_maiden_supreme-god-archbishop",
+          "name": "Supreme God Archbishop",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/25/Illust_inven_char020901.png/150px-Illust_inven_char020901.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sword_Maiden/Supreme_God_Archbishop",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "olivier",
+      "name": "Olivier",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/10/Illust_inven_char003601.png/150px-Illust_inven_char003601.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Olivier",
+      "costumes": [
+        {
+          "id": "olivier_faithful-wings",
+          "name": "Faithful Wings",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/10/Illust_inven_char003601.png/150px-Illust_inven_char003601.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Olivier/Faithful_Wings",
+          "limited": false
+        },
+        {
+          "id": "olivier_apostle",
+          "name": "Apostle",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4f/Illust_inven_char003602.png/150px-Illust_inven_char003602.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Olivier/Apostle",
+          "limited": false
+        },
+        {
+          "id": "olivier_fallen-wings",
+          "name": "Fallen Wings",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/9/96/Illust_inven_char003603.png/150px-Illust_inven_char003603.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Olivier/Fallen_Wings",
+          "limited": false
+        },
+        {
+          "id": "olivier_retired-legend",
+          "name": "Retired Legend",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4a/Illust_inven_char003604.png/150px-Illust_inven_char003604.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Olivier/Retired_Legend",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "tyr",
+      "name": "Tyr",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4d/Illust_inven_char004101.png/150px-Illust_inven_char004101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Tyr",
+      "costumes": [
+        {
+          "id": "tyr_starlight-guardian",
+          "name": "Starlight Guardian",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4d/Illust_inven_char004101.png/150px-Illust_inven_char004101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Tyr/Starlight_Guardian",
+          "limited": false
+        },
+        {
+          "id": "tyr_innocent-bunny",
+          "name": "Innocent Bunny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0b/Illust_inven_char004102.png/150px-Illust_inven_char004102.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Tyr/Innocent_Bunny",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "darian",
+      "name": "Darian",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e2/Illust_inven_char004001.png/150px-Illust_inven_char004001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Darian",
+      "costumes": [
+        {
+          "id": "darian_prophetic-dream",
+          "name": "Prophetic Dream",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e2/Illust_inven_char004001.png/150px-Illust_inven_char004001.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Darian/Prophetic_Dream",
+          "limited": false
+        },
+        {
+          "id": "darian_bittersweet-bunny",
+          "name": "Bittersweet Bunny",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c5/Illust_inven_char004002.png/150px-Illust_inven_char004002.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Darian/Bittersweet_Bunny",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "sonya",
+      "name": "Sonya",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4f/Illust_inven_char003901.png/150px-Illust_inven_char003901.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Sonya",
+      "costumes": [
+        {
+          "id": "sonya_shadowed-dream",
+          "name": "Shadowed Dream",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/4f/Illust_inven_char003901.png/150px-Illust_inven_char003901.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sonya/Shadowed_Dream",
+          "limited": false
+        },
+        {
+          "id": "sonya_little-pumpkin-girl",
+          "name": "Little Pumpkin Girl",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/0a/Illust_inven_char003902.png/150px-Illust_inven_char003902.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Sonya/Little_Pumpkin_Girl",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "granadair",
+      "name": "Granadair",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/4/42/Illust_inven_char067702.png/150px-Illust_inven_char067702.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Granadair",
+      "costumes": [
+        {
+          "id": "granadair_shrine-maiden-of-purification",
+          "name": "Shrine Maiden of Purification",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/04/Illust_inven_char067701.png/150px-Illust_inven_char067701.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Granadair/Shrine_Maiden_of_Purification",
+          "limited": false
+        },
+        {
+          "id": "granadair_queen-of-gluttis",
+          "name": "Queen of Gluttis",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/4/42/Illust_inven_char067702.png/150px-Illust_inven_char067702.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Granadair/Queen_of_Gluttis",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "palette",
+      "name": "Palette",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/14/Illust_inven_char004201.png/150px-Illust_inven_char004201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Palette",
+      "costumes": [
+        {
+          "id": "palette_shattered-dream",
+          "name": "Shattered Dream",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/1/14/Illust_inven_char004201.png/150px-Illust_inven_char004201.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Palette/Shattered_Dream",
+          "limited": false
+        },
+        {
+          "id": "palette_miracle-violet",
+          "name": "Miracle Violet",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/0/03/Illust_inven_char004202.png/150px-Illust_inven_char004202.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Palette/Miracle_Violet",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "mamonir",
+      "name": "Mamonir",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e3/Illust_inven_char067801.png/150px-Illust_inven_char067801.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Mamonir",
+      "costumes": [
+        {
+          "id": "mamonir_night-of-death",
+          "name": "Night of Death",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/e/e3/Illust_inven_char067801.png/150px-Illust_inven_char067801.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Mamonir/Night_of_Death",
+          "limited": false
+        },
+        {
+          "id": "mamonir_miracle-marine",
+          "name": "Miracle Marine",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/7/7b/Illust_inven_char067803.png/150px-Illust_inven_char067803.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Mamonir/Miracle_Marine",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "ikaruga",
+      "name": "Ikaruga",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d3/Illust_inven_char021001.png/150px-Illust_inven_char021001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Ikaruga",
+      "costumes": [
+        {
+          "id": "ikaruga_noble-flame",
+          "name": "Noble Flame",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d3/Illust_inven_char021001.png/150px-Illust_inven_char021001.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Ikaruga/Noble_Flame",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "nekyndalia",
+      "name": "Nekyndalia",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/a/a2/Illust_inven_char004301.png/150px-Illust_inven_char004301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Nekyndalia",
+      "costumes": [
+        {
+          "id": "nekyndalia_deadeye",
+          "name": "Deadeye",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/a/a2/Illust_inven_char004301.png/150px-Illust_inven_char004301.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Nekyndalia/Deadeye",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "aquila",
+      "name": "Aquila",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/26/Illust_inven_char067901.png/150px-Illust_inven_char067901.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Aquila",
+      "costumes": [
+        {
+          "id": "aquila_savage-warrior",
+          "name": "Savage Warrior",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/2/26/Illust_inven_char067901.png/150px-Illust_inven_char067901.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Aquila/Savage_Warrior",
+          "limited": false
+        }
+      ]
+    },
+    {
+      "id": "kyouka_uzen",
+      "name": "Kyouka Uzen",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d8/Illust_inven_char021101.png/150px-Illust_inven_char021101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Kyouka_Uzen",
+      "costumes": [
+        {
+          "id": "kyouka_uzen_eternal-chains",
+          "name": "Eternal Chains",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/d/d8/Illust_inven_char021101.png/150px-Illust_inven_char021101.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Kyouka_Uzen/Eternal_Chains",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "tenka_izumo",
+      "name": "Tenka Izumo",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/8/81/Illust_inven_char021201.png/150px-Illust_inven_char021201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Tenka_Izumo",
+      "costumes": [
+        {
+          "id": "tenka_izumo_ame-no-mitori",
+          "name": "Ame-no-Mitori",
+          "image": "https://static.wikitide.net/browndust2wiki/thumb/8/81/Illust_inven_char021201.png/150px-Illust_inven_char021201.png",
+          "wiki": "https://browndust2wiki.wikitide.org/wiki/Tenka_Izumo/Ame-no-Mitori",
+          "limited": true
+        }
+      ]
+    },
+    {
+      "id": "layla",
+      "name": "Layla",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/19/Illust_inven_char003001.png/150px-Illust_inven_char003001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Layla",
+      "costumes": []
+    },
+    {
+      "id": "andrew",
+      "name": "Andrew",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/21/Illust_inven_char062001.png/150px-Illust_inven_char062001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Andrew",
+      "costumes": []
+    },
+    {
+      "id": "lisianne",
+      "name": "Lisianne",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b3/Illust_inven_char100301.png/150px-Illust_inven_char100301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Lisianne",
+      "costumes": []
+    },
+    {
+      "id": "lucrezia",
+      "name": "Lucrezia",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c0/Illust_inven_char100601.png/150px-Illust_inven_char100601.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Lucrezia",
+      "costumes": []
+    },
+    {
+      "id": "bernie",
+      "name": "Bernie",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/a/af/Illust_inven_char100801.png/150px-Illust_inven_char100801.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Bernie",
+      "costumes": []
+    },
+    {
+      "id": "jayden",
+      "name": "Jayden",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/5/5d/Illust_inven_char101201.png/150px-Illust_inven_char101201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Jayden",
+      "costumes": []
+    },
+    {
+      "id": "samay",
+      "name": "Samay",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/11/Illust_inven_char101401.png/150px-Illust_inven_char101401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Samay",
+      "costumes": []
+    },
+    {
+      "id": "kry",
+      "name": "Kry",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/1b/Illust_inven_char101501.png/150px-Illust_inven_char101501.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Kry",
+      "costumes": []
+    },
+    {
+      "id": "elpis",
+      "name": "Elpis",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/1/1a/Illust_inven_char003101.png/150px-Illust_inven_char003101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Elpis",
+      "costumes": []
+    },
+    {
+      "id": "ingrid",
+      "name": "Ingrid",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/b/b2/Illust_inven_char063001.png/150px-Illust_inven_char063001.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Ingrid",
+      "costumes": []
+    },
+    {
+      "id": "cynthia",
+      "name": "Cynthia",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c2/Illust_inven_char063301.png/150px-Illust_inven_char063301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Cynthia",
+      "costumes": []
+    },
+    {
+      "id": "julie",
+      "name": "Julie",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/8/8b/Illust_inven_char063401.png/150px-Illust_inven_char063401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Julie",
+      "costumes": []
+    },
+    {
+      "id": "gynt",
+      "name": "Gynt",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/c/c2/Illust_inven_char100101.png/150px-Illust_inven_char100101.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Gynt",
+      "costumes": []
+    },
+    {
+      "id": "fred",
+      "name": "Fred",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/5/56/Illust_inven_char100201.png/150px-Illust_inven_char100201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Fred",
+      "costumes": []
+    },
+    {
+      "id": "remnunt",
+      "name": "Remnunt",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/8/8a/Illust_inven_char100401.png/150px-Illust_inven_char100401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Remnunt",
+      "costumes": []
+    },
+    {
+      "id": "wiggle",
+      "name": "Wiggle",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/9/94/Illust_inven_char100501.png/150px-Illust_inven_char100501.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Wiggle",
+      "costumes": []
+    },
+    {
+      "id": "emma",
+      "name": "Emma",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/f/f0/Illust_inven_char101301.png/150px-Illust_inven_char101301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Emma",
+      "costumes": []
+    },
+    {
+      "id": "carlson",
+      "name": "Carlson",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/3/39/Illust_inven_char103201.png/150px-Illust_inven_char103201.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Carlson",
+      "costumes": []
+    },
+    {
+      "id": "lydia",
+      "name": "Lydia",
+      "element": "water",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/6/6c/Illust_inven_char103301.png/150px-Illust_inven_char103301.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Lydia",
+      "costumes": []
+    },
+    {
+      "id": "rigenette",
+      "name": "Rigenette",
+      "element": "wind",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/0/01/Illust_inven_char103401.png/150px-Illust_inven_char103401.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Rigenette",
+      "costumes": []
+    },
+    {
+      "id": "beatrice",
+      "name": "Beatrice",
+      "element": "fire",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/22/Illust_inven_char103501.png/150px-Illust_inven_char103501.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Beatrice",
+      "costumes": []
+    },
+    {
+      "id": "maria",
+      "name": "Maria",
+      "element": "dark",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/3/33/Illust_inven_char103601.png/150px-Illust_inven_char103601.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Maria",
+      "costumes": []
+    },
+    {
+      "id": "arines",
+      "name": "Arines",
+      "element": "light",
+      "image": "https://static.wikitide.net/browndust2wiki/thumb/2/2a/Illust_inven_char103701.png/150px-Illust_inven_char103701.png",
+      "wiki": "https://browndust2wiki.wikitide.org/wiki/Arines",
+      "costumes": []
+    }
+  ],
+  "checks": {
+    "character_count": 86,
+    "costume_count": 157,
+    "elements": {
+      "fire": 16,
+      "light": 17,
+      "water": 17,
+      "wind": 20,
+      "dark": 16
+    },
+    "duplicate_character_ids": [],
+    "duplicate_costume_ids": [],
+    "duplicate_character_costume_pairs": [],
+    "costumes_with_unknown_character": [],
+    "characters_without_costumes": [
+      "andrew",
+      "arines",
+      "beatrice",
+      "bernie",
+      "carlson",
+      "cynthia",
+      "elpis",
+      "emma",
+      "fred",
+      "gynt",
+      "ingrid",
+      "jayden",
+      "julie",
+      "kry",
+      "layla",
+      "lisianne",
+      "lucrezia",
+      "lydia",
+      "maria",
+      "remnunt",
+      "rigenette",
+      "samay",
+      "wiggle"
+    ],
+    "notes": [
+      "Element values are normalized from source icon filenames: Fire, Water, Wind, Light, Darkness -> fire, water, wind, light, dark.",
+      "No Earth character appears in the supplied character source file.",
+      "Costume IDs use character_id + costume slug because costume names repeat across characters."
+    ]
+  },
+  "presets": [],
+  "preset_schema": {
+    "id": "unique preset ID",
+    "name": "preset name",
+    "description": "optional description",
+    "team": [
+      {
+        "slot": 1,
+        "character_id": "character ID from characters",
+        "costume_id": "costume ID belonging to that character"
+      }
+    ]
+  }
+}
