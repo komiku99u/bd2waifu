@@ -227,13 +227,13 @@ async function drawResult() {
       ctx.fillStyle='#5b6c62'; ctx.font='700 20px Arial'; ctx.textAlign='center'; ctx.fillText(c.name,x+tileW/2,y+tileH/2);
     }
     const grad=ctx.createLinearGradient(0,y+tileH-130,0,y+tileH); grad.addColorStop(0,'rgba(0,0,0,0)'); grad.addColorStop(1,'rgba(0,0,0,.78)'); ctx.fillStyle=grad; ctx.fillRect(x,y,tileW,tileH);
-    ctx.fillStyle='#fff'; ctx.textAlign='left'; ctx.font='900 21px Arial'; fitText(ctx,c.name,x+16,y+tileH-27,tileW-32,21);
     ctx.restore();
 
     // Decorative frame around every waifu card. The double-line frame,
     // corner ornaments and small center marks make the generated sheet
     // feel more like a finished collectible card instead of a plain grid.
     drawCardFrame(ctx,x,y,tileW,tileH);
+    drawNamePlate(ctx,x,y,tileW,tileH,c.name);
   }
 
   // Subtle outer frame for the whole poster.
@@ -306,6 +306,55 @@ function drawCardFrame(ctx,x,y,w,h){
   drawDiamond(ctx,x+w/2,y+h-pad+1,5,color);
 
   ctx.restore();
+}
+
+
+function drawNamePlate(ctx,x,y,w,h,name){
+  const plateW = Math.min(w-34, 260);
+  const plateH = 42;
+  const px = x + (w-plateW)/2;
+  const py = y + h - plateH - 15;
+  const r = 11;
+  const dark = '#214b3d';
+  const gold = '#f3d26b';
+
+  ctx.save();
+
+  // Soft dark backing keeps the name readable over any artwork.
+  ctx.fillStyle = 'rgba(20,34,29,.84)';
+  roundRect(ctx,px,py,plateW,plateH,r);
+  ctx.fill();
+
+  // Ornate double border.
+  ctx.strokeStyle = dark;
+  ctx.lineWidth = 3;
+  roundRect(ctx,px,py,plateW,plateH,r);
+  ctx.stroke();
+
+  ctx.strokeStyle = gold;
+  ctx.lineWidth = 1.6;
+  roundRect(ctx,px+4,py+4,plateW-8,plateH-8,7);
+  ctx.stroke();
+
+  // Small diamond ornaments on both sides.
+  drawDiamond(ctx,px+12,py+plateH/2,3,gold);
+  drawDiamond(ctx,px+plateW-12,py+plateH/2,3,gold);
+
+  ctx.fillStyle='#fff';
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.font='900 19px Arial, sans-serif';
+  fitTextCentered(ctx,name,px+plateW/2,py+plateH/2,plateW-34,19);
+
+  ctx.restore();
+}
+
+function fitTextCentered(ctx,text,x,y,maxWidth,fontSize){
+  let s=text;
+  while(ctx.measureText(s).width>maxWidth && s.length>3){
+    s=s.slice(0,-4)+'…';
+  }
+  ctx.fillText(s,x,y);
 }
 
 function drawDiamond(ctx,cx,cy,size,color){
