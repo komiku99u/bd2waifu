@@ -1,5 +1,3 @@
-import { WAIFU_IDS } from '../data/waifu-ids.js';
-
 const state = { characters: [], byId: new Map(), lang: 'en' };
 const $ = (s) => document.querySelector(s);
 

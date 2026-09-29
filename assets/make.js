@@ -1,10 +1,9 @@
-import { WAIFU_IDS } from '../data/waifu-ids.js';
-
 const state = {
   characters: [],
   byId: new Map(),
   selected: [],
   costumeByCharacter: new Map(),
+  openCostumeId: null,
   lang: 'en'
 };
 
@@ -13,26 +12,24 @@ const grid = $('#characterGrid');
 const strip = $('#selectionStrip');
 const countEl = $('#selectedCount');
 const generateBtn = $('#generateBtn');
-const customizeBtn = $('#customizeBtn');
 const searchInput = $('#searchInput');
 const elementFilter = $('#elementFilter');
-const costumeModal = $('#costumeModal');
 const resultModal = $('#resultModal');
-const costumeList = $('#costumeList');
 const resultCanvas = $('#resultCanvas');
 
 const i18n = {
   en: {
-    eyebrow:'YOUR WAIFU. YOUR STORY.', heroTitle:'The 9 Waifu<br>That Shaped<br>Who I Am', heroCopy:'Old favorites. Unforgettable characters. Bring your nine waifu together in one image to save and share.', chooseBtn:'Choose my 9 waifu <span>→</span>', rankingLink:'Explore the rankings ↗', exampleCaption:'Nine waifu. A little piece of you.', chooseEyebrow:'MAKE YOUR LIST', chooseTitle:'Choose your 9 waifu', searchPlaceholder:'Search waifu...', customizeBtn:'Customize costumes', generateBtn:'Generate my 9 waifu →', popularTitle:'Popular waifu', period:'Based on community selections'
+    chooseEyebrow:'MAKE YOUR LIST', chooseTitle:'Choose your 9 waifu', searchPlaceholder:'Search waifu...', generateBtn:'Generate my 9 waifu →', noCostume:'No costume available', chooseCostume:'Choose costume', hideCostume:'Hide costumes'
   },
   jp: {
-    eyebrow:'あなたの推し。あなたの物語。', heroTitle:'私を形作った<br>9人のワイフ', heroCopy:'忘れられないキャラクターたち。あなたの9人のワイフを1枚の画像にまとめて保存・シェアしよう。', chooseBtn:'9人のワイフを選ぶ <span>→</span>', rankingLink:'ランキングを見る ↗', exampleCaption:'9人のワイフ。あなたの一部。', chooseEyebrow:'リストを作る', chooseTitle:'9人のワイフを選ぶ', searchPlaceholder:'ワイフを検索...', customizeBtn:'衣装を選ぶ', generateBtn:'9人のワイフを生成 →', popularTitle:'人気のワイフ', period:'みんなの選択を集計'
+    chooseEyebrow:'リストを作る', chooseTitle:'9人のワイフを選ぶ', searchPlaceholder:'ワイフを検索...', generateBtn:'9人のワイフを生成 →', noCostume:'衣装なし', chooseCostume:'衣装を選ぶ', hideCostume:'衣装を閉じる'
   }
 };
 
 async function init() {
   const data = await fetch('./data/master-data.json').then(r => r.json());
-  state.characters = data.characters.filter(c => WAIFU_IDS.includes(c.id));
+  // Deliberately use the complete master data: every character is selectable.
+  state.characters = data.characters;
   state.byId = new Map(state.characters.map(c => [c.id, c]));
   restoreFromUrl();
   bindEvents();
@@ -47,8 +44,6 @@ function bindEvents() {
   searchInput.addEventListener('input', renderCharacters);
   elementFilter.addEventListener('change', renderCharacters);
   generateBtn.addEventListener('click', generateResult);
-  customizeBtn.addEventListener('click', openCustomize);
-  document.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeCostume));
   $('#closeResult').addEventListener('click', () => resultModal.classList.add('hidden'));
   $('#downloadBtn').addEventListener('click', downloadResult);
   $('#shareBtn').addEventListener('click', shareResult);
@@ -66,6 +61,7 @@ function setLanguage(lang) {
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => el.placeholder = i18n[state.lang][el.dataset.i18nPlaceholder]);
   document.querySelectorAll('.lang').forEach(b => b.classList.toggle('active', b.dataset.lang === state.lang));
+  renderCharacters();
 }
 
 function renderAll() {
@@ -82,25 +78,57 @@ function renderCharacters() {
     const matchElement = element === 'all' || c.element === element;
     return matchName && matchElement;
   });
+
   grid.innerHTML = filtered.map(c => {
     const selected = state.selected.includes(c.id);
-    const img = c.costumes?.[0]?.image || c.image;
-    return `<button class="character-card ${selected ? 'selected' : ''}" data-id="${esc(c.id)}" aria-pressed="${selected}">
-      <img loading="lazy" src="${esc(imageSrc(img))}" alt="${esc(c.name)}" onerror="this.style.opacity='0'">
-      <span class="character-name">${esc(c.name)}</span>
-    </button>`;
-  }).join('') || '<p class="muted">No waifu found.</p>';
-  grid.querySelectorAll('.character-card').forEach(card => card.addEventListener('click', () => toggleCharacter(card.dataset.id)));
+    const costumes = Array.isArray(c.costumes) ? c.costumes : [];
+    const open = state.openCostumeId === c.id && costumes.length > 0;
+    const current = selectedCostume(c);
+    return `<article class="character-card ${selected ? 'selected' : ''}" data-id="${esc(c.id)}">
+      <button class="character-main" type="button" aria-pressed="${selected}" aria-label="${selected ? 'Remove ' : 'Select '}${esc(c.name)}">
+        <img loading="lazy" src="${esc(imageSrc(current?.image || c.image))}" alt="${esc(c.name)}" onerror="this.style.opacity='0'">
+        <span class="character-name">${esc(c.name)}</span>
+      </button>
+      ${costumes.length ? `<button class="costume-trigger" type="button" data-costume-toggle="${esc(c.id)}">${open ? i18n[state.lang].hideCostume : i18n[state.lang].chooseCostume}<span>⌄</span></button>
+      <div class="inline-costumes ${open ? '' : 'hidden'}">
+        ${costumes.map(co => `<button class="costume-option-inline ${current?.id === co.id ? 'active' : ''}" type="button" data-costume-id="${esc(co.id)}" data-character-id="${esc(c.id)}">
+          <img loading="lazy" src="${esc(imageSrc(co.image))}" alt="${esc(co.name)}">
+          <span>${esc(co.name)}</span>
+        </button>`).join('')}
+      </div>` : `<div class="no-costume">${i18n[state.lang].noCostume}</div>`}
+    </article>`;
+  }).join('') || '<p class="muted">No character found.</p>';
+
+  grid.querySelectorAll('.character-main').forEach(btn => btn.addEventListener('click', () => {
+    const id = btn.closest('.character-card').dataset.id;
+    toggleCharacter(id);
+  }));
+  grid.querySelectorAll('[data-costume-toggle]').forEach(btn => btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const id = btn.dataset.costumeToggle;
+    state.openCostumeId = state.openCostumeId === id ? null : id;
+    renderCharacters();
+  }));
+  grid.querySelectorAll('[data-costume-id]').forEach(btn => btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const id = btn.dataset.characterId;
+    state.costumeByCharacter.set(id, btn.dataset.costumeId);
+    state.openCostumeId = id;
+    renderCharacters();
+    renderSelection();
+  }));
 }
 
 function toggleCharacter(id) {
   if (state.selected.includes(id)) {
     state.selected = state.selected.filter(x => x !== id);
+    state.costumeByCharacter.delete(id);
+    if (state.openCostumeId === id) state.openCostumeId = null;
   } else {
     if (state.selected.length >= 9) return;
     state.selected.push(id);
     const c = state.byId.get(id);
-    if (c && c.costumes?.length && !state.costumeByCharacter.has(id)) state.costumeByCharacter.set(id, c.costumes[0].id);
+    if (c?.costumes?.length && !state.costumeByCharacter.has(id)) state.costumeByCharacter.set(id, c.costumes[0].id);
   }
   renderAll();
 }
@@ -116,39 +144,17 @@ function renderSelection() {
     </div>`;
   }).join('');
   for (let i = state.selected.length; i < 9; i++) strip.insertAdjacentHTML('beforeend', `<div class="slot empty"><span>+</span></div>`);
-  strip.querySelectorAll('.slot[data-slot-id]').forEach(slot => slot.addEventListener('click', () => openCostume(slot.dataset.slotId)));
+  strip.querySelectorAll('.slot[data-slot-id]').forEach(slot => slot.addEventListener('click', () => {
+    state.openCostumeId = slot.dataset.slotId;
+    renderCharacters();
+    const card = grid.querySelector(`[data-id="${CSS.escape(slot.dataset.slotId)}"]`);
+    card?.scrollIntoView({behavior:'smooth',block:'center'});
+  }));
 }
 
 function updateActions() {
-  const ready = state.selected.length === 9;
-  generateBtn.disabled = !ready;
-  customizeBtn.disabled = state.selected.length === 0;
+  generateBtn.disabled = state.selected.length !== 9;
 }
-
-function openCustomize() {
-  if (!state.selected.length) return;
-  openCostume(state.selected[0]);
-}
-
-function openCostume(id) {
-  const c = state.byId.get(id); if (!c) return;
-  $('#costumeTitle').textContent = c.name;
-  const costumes = c.costumes?.length ? c.costumes : [{id:`${c.id}_default`,name:'Default',image:c.image}];
-  costumeList.innerHTML = costumes.map(co => {
-    const active = state.costumeByCharacter.get(id) === co.id;
-    return `<button class="costume-option ${active ? 'active' : ''}" data-costume="${esc(co.id)}" data-character="${esc(id)}">
-      <img loading="lazy" src="${esc(imageSrc(co.image))}" alt="${esc(co.name)}"><span>${esc(co.name)}</span>
-    </button>`;
-  }).join('');
-  costumeList.querySelectorAll('.costume-option').forEach(btn => btn.addEventListener('click', () => {
-    state.costumeByCharacter.set(id, btn.dataset.costume);
-    renderSelection();
-    openCostume(id);
-  }));
-  costumeModal.classList.remove('hidden');
-}
-
-function closeCostume() { costumeModal.classList.add('hidden'); }
 
 function selectedCostume(c) {
   const id = state.costumeByCharacter.get(c.id);
@@ -164,7 +170,8 @@ function makeShareUrl() {
 }
 
 function restoreFromUrl() {
-  const raw = new URL(location.href).hash.startsWith('#set=') ? new URL(location.href).hash.slice(5) : new URL(location.href).searchParams.get('set');
+  const current = new URL(location.href);
+  const raw = current.hash.startsWith('#set=') ? current.hash.slice(5) : current.searchParams.get('set');
   if (!raw) return;
   try {
     const decoded = decodeURIComponent(raw);
@@ -179,13 +186,11 @@ function restoreFromUrl() {
       const valid = c.costumes?.some(co => co.id === costumeId);
       state.costumeByCharacter.set(id, valid ? costumeId : (c.costumes?.[0]?.id || ''));
     }
-    renderAll();
   } catch {}
 }
 
 async function generateResult() {
   if (state.selected.length !== 9) return;
-  closeCostume();
   resultModal.classList.remove('hidden');
   $('#shareStatus').textContent = 'Generating image…';
   await drawResult();
