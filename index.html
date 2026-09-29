@@ -16,8 +16,8 @@
     <header class="topbar">
       <a class="brand" href="./">My 9 Waifu</a>
       <div class="language-switch" aria-label="Language">
-        <button class="lang" data-lang="jp">日本語</button>
         <button class="lang active" data-lang="en">English</button>
+        <button class="lang" data-lang="jp">日本語</button>
       </div>
     </header>
 
@@ -25,7 +25,7 @@
       <p class="eyebrow" data-i18n="eyebrow">YOUR WAIFU. YOUR STORY.</p>
       <h1 data-i18n="heroTitle">The 9 Waifu<br>That Shaped<br>Who I Am</h1>
       <p class="hero-copy" data-i18n="heroCopy">Old favorites. Unforgettable characters. Bring your nine waifu together in one image to save and share.</p>
-      <a class="primary-btn" href="#choose" data-i18n="chooseBtn">Choose my 9 waifu <span>→</span></a>
+      <a class="primary-btn" href="make.html" data-i18n="chooseBtn">Choose my 9 waifu <span>→</span></a>
       <a class="secondary-link" href="#popular" data-i18n="rankingLink">Explore the rankings ↗</a>
     </section>
 
@@ -33,36 +33,6 @@
       <div class="section-kicker"><span>MY 9 WAIFU</span><span>EXAMPLE</span></div>
       <div class="mini-grid" id="exampleGrid"></div>
       <p data-i18n="exampleCaption">Nine waifu. A little piece of you.</p>
-    </section>
-
-    <section class="section" id="choose">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow small" data-i18n="chooseEyebrow">MAKE YOUR LIST</p>
-          <h2 data-i18n="chooseTitle">Choose your 9 waifu</h2>
-        </div>
-        <div class="counter"><strong id="selectedCount">0</strong><span>/ 9</span></div>
-      </div>
-      <div class="toolbar">
-        <label class="search-box">
-          <span>⌕</span>
-          <input id="searchInput" type="search" autocomplete="off" placeholder="Search waifu..." data-i18n-placeholder="searchPlaceholder">
-        </label>
-        <select id="elementFilter" aria-label="Filter by element">
-          <option value="all">All elements</option>
-          <option value="fire">Fire</option>
-          <option value="water">Water</option>
-          <option value="wind">Wind</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </div>
-      <div class="selection-strip" id="selectionStrip" aria-live="polite"></div>
-      <div class="character-grid" id="characterGrid"></div>
-      <div class="bottom-action">
-        <button id="customizeBtn" class="outline-btn" disabled data-i18n="customizeBtn">Customize costumes</button>
-        <button id="generateBtn" class="primary-btn" disabled data-i18n="generateBtn">Generate my 9 waifu →</button>
-      </div>
     </section>
 
     <section class="section popular" id="popular">
@@ -78,37 +48,6 @@
 
     <footer>My 9 Waifu · A fan-made project</footer>
   </main>
-
-  <div class="modal hidden" id="costumeModal" role="dialog" aria-modal="true" aria-labelledby="costumeTitle">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-card">
-      <button class="close-btn" data-close-modal aria-label="Close">×</button>
-      <p class="eyebrow small">COSTUME</p>
-      <h2 id="costumeTitle">Choose a costume</h2>
-      <div id="costumeList" class="costume-list"></div>
-    </div>
-  </div>
-
-  <div class="modal hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
-    <div class="modal-backdrop"></div>
-    <div class="modal-card result-card">
-      <div class="result-head">
-        <div>
-          <p class="eyebrow small">YOUR RESULT</p>
-          <h2 id="resultTitle">My 9 Waifu</h2>
-        </div>
-        <button class="close-btn" id="closeResult" aria-label="Close">×</button>
-      </div>
-      <div class="canvas-wrap"><canvas id="resultCanvas" width="1200" height="1730"></canvas></div>
-      <div class="result-actions">
-        <button class="primary-btn" id="downloadBtn">Download image ↓</button>
-        <button class="outline-btn" id="shareBtn">Share link ↗</button>
-        <button class="text-btn" id="copyBtn">Copy share link</button>
-      </div>
-      <p class="muted center" id="shareStatus"></p>
-    </div>
-  </div>
-
-  <script type="module" src="assets/app.js"></script>
+  <script type="module" src="assets/home.js"></script>
 </body>
 </html>
