@@ -244,6 +244,7 @@ select {
   border: 1px solid var(--line);
   border-radius: 13px;
   overflow: visible;
+  margin-bottom: 10px;
 }
 .element-btn {
   width: 100%;
