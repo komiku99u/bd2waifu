@@ -4,12 +4,16 @@ const state = {
   selected: [],
   costumeByCharacter: new Map(),
   openCostumeId: null,
+  activeSlotIndex: null,
   lang: 'en'
 };
 
 const $ = (s) => document.querySelector(s);
 const grid = $('#characterGrid');
 const strip = $('#selectionStrip');
+const characterModal = $('#characterModal');
+const characterModalBackdrop = $('#characterModalBackdrop');
+const closeCharacterModalBtn = $('#closeCharacterModal');
 const countEl = $('#selectedCount');
 const generateBtn = $('#generateBtn');
 const searchInput = $('#searchInput');
@@ -54,11 +58,16 @@ function bindEvents() {
   $('#copyBtn').addEventListener('click', copyShareLink);
   $('#closeCostumeModal').addEventListener('click', closeCostumeModal);
   $('#costumeModalBackdrop').addEventListener('click', closeCostumeModal);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCostumeModal(); });
+  closeCharacterModalBtn.addEventListener('click', closeCharacterModal);
+  characterModalBackdrop.addEventListener('click', closeCharacterModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (!costumeModal.classList.contains('hidden')) closeCostumeModal();
+    else if (!characterModal.classList.contains('hidden')) closeCharacterModal();
+  });
   document.querySelectorAll('.lang').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
   window.addEventListener('popstate', restoreFromUrl);
 }
-
 
 function setElementFilter(element) {
   elementFilter.dataset.value = element;
@@ -106,7 +115,7 @@ function renderCharacters() {
     const selected = state.selected.includes(c.id);
     const costumes = Array.isArray(c.costumes) ? c.costumes : [];
     return `<article class="character-card ${selected ? 'selected' : ''}" data-id="${esc(c.id)}">
-      <button class="character-main" type="button" aria-pressed="${selected}" aria-label="${selected ? 'Remove ' : 'Select '}${esc(c.name)}">
+      <button class="character-main" type="button" aria-pressed="${selected}" aria-label="Select ${esc(c.name)}">
         <img loading="lazy" src="${esc(imageSrc(selectedCostume(c)?.image || c.image))}" alt="${esc(c.name)}" onerror="this.style.opacity='0'">
         <span class="character-name">${esc(c.name)}</span>
       </button>
@@ -115,13 +124,49 @@ function renderCharacters() {
   }).join('') || '<p class="muted">No character found.</p>';
 
   grid.querySelectorAll('.character-main').forEach(btn => btn.addEventListener('click', () => {
-    const id = btn.closest('.character-card').dataset.id;
-    toggleCharacter(id);
+    assignCharacterToSlot(btn.closest('.character-card').dataset.id);
   }));
   grid.querySelectorAll('[data-costume-toggle]').forEach(btn => btn.addEventListener('click', (e) => {
     e.stopPropagation();
     openCostumeModal(btn.dataset.costumeToggle);
   }));
+}
+
+function openCharacterModal(slotIndex) {
+  state.activeSlotIndex = slotIndex;
+  searchInput.value = '';
+  setElementFilter('all');
+  renderCharacters();
+  characterModal.classList.remove('hidden');
+  document.body.classList.add('modal-open');
+  setTimeout(() => searchInput.focus(), 50);
+}
+
+function closeCharacterModal() {
+  characterModal.classList.add('hidden');
+  document.body.classList.remove('modal-open');
+  state.activeSlotIndex = null;
+}
+
+function assignCharacterToSlot(id) {
+  const index = state.activeSlotIndex;
+  if (index === null || index === undefined) return;
+  const existingIndex = state.selected.indexOf(id);
+  if (existingIndex !== -1 && existingIndex !== index) {
+    // Prevent duplicate characters.
+    return;
+  }
+  const previous = state.selected[index];
+  if (previous && previous !== id) state.costumeByCharacter.delete(previous);
+  state.selected[index] = id;
+  const c = state.byId.get(id);
+  if (c?.costumes?.length) {
+    if (!state.costumeByCharacter.has(id)) state.costumeByCharacter.set(id, c.costumes[0].id);
+  } else {
+    state.costumeByCharacter.delete(id);
+  }
+  closeCharacterModal();
+  renderAll();
 }
 
 function openCostumeModal(characterId) {
@@ -169,24 +214,29 @@ function toggleCharacter(id) {
 }
 
 function renderSelection() {
-  countEl.textContent = state.selected.length;
-  strip.innerHTML = state.selected.map((id, i) => {
-    const c = state.byId.get(id); if (!c) return '';
-    const costume = selectedCostume(c);
-    return `<div class="slot" data-slot-id="${esc(id)}" title="${esc(c.name)}">
-      <img src="${esc(imageSrc(costume?.image || c.image))}" alt="${esc(c.name)}">
-      <span>${i + 1}</span>
-    </div>`;
-  }).join('');
-  for (let i = state.selected.length; i < 9; i++) strip.insertAdjacentHTML('beforeend', `<div class="slot empty"><span>+</span></div>`);
-  strip.querySelectorAll('.slot[data-slot-id]').forEach(slot => slot.addEventListener('click', () => {
-    const c = state.byId.get(slot.dataset.slotId);
-    if (c?.costumes?.length) openCostumeModal(c.id);
+  countEl.textContent = state.selected.filter(Boolean).length;
+  strip.innerHTML = '';
+  for (let i = 0; i < 9; i++) {
+    const id = state.selected[i];
+    if (id) {
+      const c = state.byId.get(id);
+      if (!c) continue;
+      const costume = selectedCostume(c);
+      strip.insertAdjacentHTML('beforeend', `<button class="slot filled" type="button" data-slot-index="${i}" title="${esc(c.name)}">
+        <img src="${esc(imageSrc(costume?.image || c.image))}" alt="${esc(c.name)}">
+        <span>${i + 1}</span>
+      </button>`);
+    } else {
+      strip.insertAdjacentHTML('beforeend', `<button class="slot empty" type="button" data-slot-index="${i}" aria-label="Choose character for slot ${i + 1}"><span>+</span><small>${i + 1}</small></button>`);
+    }
+  }
+  strip.querySelectorAll('[data-slot-index]').forEach(slot => slot.addEventListener('click', () => {
+    openCharacterModal(Number(slot.dataset.slotIndex));
   }));
 }
 
 function updateActions() {
-  generateBtn.disabled = state.selected.length !== 9;
+  generateBtn.disabled = state.selected.filter(Boolean).length !== 9 || state.selected.length < 9 || state.selected.some(id => !id);
 }
 
 function selectedCostume(c) {
@@ -223,7 +273,7 @@ function restoreFromUrl() {
 }
 
 async function generateResult() {
-  if (state.selected.length !== 9) return;
+  if (state.selected.filter(Boolean).length !== 9 || state.selected.length < 9 || state.selected.some(id => !id)) return;
   resultModal.classList.remove('hidden');
   $('#shareStatus').textContent = 'Generating image…';
   await drawResult();
