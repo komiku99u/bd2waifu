@@ -161,9 +161,7 @@ function assignCharacterToSlot(id) {
   state.selected[index] = id;
   const c = state.byId.get(id);
   if (c?.costumes?.length) {
-    // Selecting a character also selects its first/default costume immediately.
-    // The character is then placed into the slot without requiring a second click.
-    state.costumeByCharacter.set(id, c.costumes[0].id);
+    if (!state.costumeByCharacter.has(id)) state.costumeByCharacter.set(id, c.costumes[0].id);
   } else {
     state.costumeByCharacter.delete(id);
   }
